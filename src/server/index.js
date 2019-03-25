@@ -10,12 +10,16 @@ Import the external libraries:
 - express
 - morgan
 - chalk
+- body-parser
+- cors
 */
 import http from 'http';
 import https from 'https';
 import express from 'express';
 import morgan from 'morgan';
 import chalk from 'chalk';
+import bodyParser from 'body-parser';
+import cors from 'cors';
 
 /*
 Import internal libraries
@@ -43,6 +47,8 @@ const morganMiddleware = morgan((tokens, req, res) => {
 // Create the express application
 const app = express();
 app.use(morganMiddleware);
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+app.use(bodyParser.json({ limit: '50mb', keepExtensions: true }));
 app.use('/api/v1', apiV1Router);
 
 // Last route is 404
@@ -63,9 +69,9 @@ app.use((error, req, res, next) => {
         }
     }
     if(req.xhr) {
-        return res.json(obj);
+        res.json(obj);
     } else {
-        return res.send('Ocharme!');
+        res.send('Ocharme');
     }
 });
 
