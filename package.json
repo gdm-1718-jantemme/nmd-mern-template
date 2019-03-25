@@ -1,0 +1,26 @@
+{
+  "name": "nmd-mern-template",
+  "version": "1.0.0",
+  "description": "Node Express with React Client Example Project\"",
+  "main": "index.js",
+  "repository": "https://github.com/gdmgent-1819-mobdev2/nmd-mern-template.git",
+  "author": "Philippe De Pauw - Waterschoot",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "http": "^0.0.0",
+    "https": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "server-start": "nodemon src/server/index.js --exec babel-node"
+  }
+}
