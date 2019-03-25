@@ -7,10 +7,12 @@
   "author": "Philippe De Pauw - Waterschoot",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^2.4.2",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "http": "^0.0.0",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
