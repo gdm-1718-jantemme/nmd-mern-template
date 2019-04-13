@@ -27,5 +27,27 @@ class PostController {
         }
         return res.json(item);
     }
+
+    create = (req, res, next) => {
+        return res.json(posts);
+    }
+
+    store = (req, res, next) => {
+        return res.json(posts);
+    }
+
+    edit = (req, res, next) => {
+        return res.json(posts);
+    }
+
+    update = (req, res, next) => {
+        return res.json(posts);
+    }
+
+    destroy = (req, res, next) => {
+        return res.json(posts);
+    }
+
+    
 }
 export default PostController;
